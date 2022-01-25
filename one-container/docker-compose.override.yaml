@@ -1,0 +1,9 @@
+version: '2'
+volumes: {}
+
+services:
+  pihole:
+    image: chrstnhntschl/pihole-unbound:latest
+    volumes:
+      - /srv/docker/volumes/pihole-unbound/etc/pihole:/etc/pihole:rw
+      - /srv/docker/volumes/pihole-unbound/etc/dnsmasq.d:/etc/dnsmasq.d:rw
